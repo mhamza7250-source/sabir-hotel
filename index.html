@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabir Hotel & Restaurant — Vehari | Order on WhatsApp</title>
+<meta name="description" content="Sabir Hotel & Restaurant, Peer Murad Multan Road Vehari near COMSATS University. Desi Chicken Karahi, Beef & Mutton Karahi, BBQ, Biryani — order direct on WhatsApp 0333-6263757. Always Open.">
+<meta property="og:title" content="Sabir Hotel & Restaurant — Vehari | Order on WhatsApp">
+<meta property="og:description" content="Desi Karahi, BBQ, Biryani & more — 79 items. Order direct on WhatsApp 0333-6263757. Always Open.">
+<meta property="og:image" content="https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg">
+<meta name="theme-color" content="#7a0012">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#b3001b;--darkred:#7a0012;--gold:#f5b921;--cream:#fff7e6;--dark:#1c0f0a}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#fffaf0;color:#222}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--darkred),var(--red));color:#fff;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.logo{font-size:20px;font-weight:800}.logo span{color:var(--gold)}
+.hbtn{background:var(--gold);color:#000;padding:8px 12px;border-radius:20px;font-weight:700;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=1200&q=80') center/cover;color:#fff;text-align:center;padding:54px 16px 44px}
+.hero h1{font-size:38px;line-height:1.15}.hero h1 b{color:var(--gold)}
+.hero .urdu{font-size:26px;color:var(--gold);margin:6px 0}
+.hero p{max-width:640px;margin:10px auto;font-size:16px}
+.badge{display:inline-block;background:var(--red);padding:6px 14px;border-radius:20px;margin:4px;font-weight:600;font-size:14px}
+.hero .cta{margin-top:16px}
+.hero .cta a{display:inline-block;margin:5px;padding:12px 20px;border-radius:30px;font-weight:800;text-decoration:none}
+.wa{background:#25D366;color:#fff}.call{background:#fff;color:var(--red)}
+.info{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px;background:var(--cream)}
+.info div{background:#fff;border:1px solid #f0d9a0;border-radius:12px;padding:10px 14px;font-size:14px;max-width:320px;text-align:center}
+nav.cats{position:sticky;top:52px;z-index:40;background:#fff;padding:10px;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+nav.cats a{display:inline-block;margin:3px;padding:8px 14px;border-radius:20px;background:#fdecec;color:var(--red);text-decoration:none;font-weight:700;font-size:14px}
+nav.cats a:hover{background:var(--red);color:#fff}
+.search{padding:12px 14px 0;max-width:900px;margin:auto}
+.search input{width:100%;padding:12px;border:2px solid #f0d9a0;border-radius:12px;font-size:16px}
+section{max-width:1100px;margin:auto;padding:22px 14px 6px}
+section h2{color:var(--red);font-size:26px;border-bottom:3px solid var(--gold);padding-bottom:6px;margin-bottom:6px}
+section h2 span{float:right;font-size:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:12px}
+.card img.food{width:100%;height:165px;object-fit:cover;border-radius:10px;margin-bottom:10px;background:#f3e2c7}
+.card{background:#fff;border:1px solid #eee;border-radius:14px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card h3{font-size:16px;margin-bottom:4px}
+.card .ur{color:#888;font-size:14px;text-align:right}
+.variants{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.variants button{border:1.5px solid var(--red);background:#fff;color:var(--red);padding:6px 10px;border-radius:16px;font-weight:700;cursor:pointer;font-size:13px}
+.variants button.sel{background:var(--red);color:#fff}
+.add{width:100%;background:var(--gold);border:none;padding:10px;border-radius:10px;font-weight:800;cursor:pointer;font-size:15px}
+.add:active{transform:scale(.98)}
+#cartbar{position:fixed;bottom:0;left:0;right:0;background:var(--dark);color:#fff;padding:12px 14px;display:none;z-index:60;box-shadow:0 -3px 12px rgba(0,0,0,.35)}
+#cartbar .row{display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:auto}
+#cartitems{max-width:900px;margin:8px auto 0;font-size:14px;max-height:150px;overflow:auto}
+#cartitems div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed #555}
+.qty button{background:var(--gold);border:none;width:24px;height:24px;border-radius:50%;font-weight:800;cursor:pointer}
+.orderbtn{background:#25D366;color:#fff;border:none;padding:12px 18px;border-radius:25px;font-weight:800;cursor:pointer;font-size:15px}
+.form{max-width:900px;margin:10px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.form input,.form select,.form textarea{padding:10px;border-radius:8px;border:1px solid #555;font-size:14px;width:100%}
+.form textarea{grid-column:1/-1}
+footer{background:var(--dark);color:#eee;text-align:center;padding:28px 14px 90px;margin-top:30px}
+footer a{color:var(--gold)}
+.deal{background:linear-gradient(135deg,var(--red),var(--darkred));color:#fff;border-radius:16px;padding:18px;text-align:center;margin-top:12px}
+.deal b{color:var(--gold);font-size:20px}
+@media(max-width:600px){.hero h1{font-size:30px}.form{grid-template-columns:1fr}}
+
+.steps{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:16px 14px 4px;max-width:1000px;margin:auto}
+.step{background:#fff;border:2px solid var(--gold);border-radius:14px;padding:12px 16px;text-align:center;flex:1;min-width:200px;font-size:15px}
+.step b{color:var(--red);display:block;font-size:17px;margin-bottom:4px}
+.realmenu{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px}
+.realmenu figure{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.realmenu img{width:100%;height:300px;object-fit:cover;object-position:top;cursor:zoom-in;display:block}
+.realmenu figcaption{padding:10px 12px;font-size:14px;font-weight:700;color:var(--red)}
+.realmenu figcaption small{display:block;color:#666;font-weight:400;margin-top:2px}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:99;display:none;overflow:auto;text-align:center;padding:14px}
+#lightbox img{max-width:96%;border-radius:10px}
+#lightbox button{position:fixed;top:12px;right:14px;background:var(--red);color:#fff;border:none;font-size:20px;width:42px;height:42px;border-radius:50%;cursor:pointer}
+#opreview{background:#0f2d1d;color:#d9ffe6;border-radius:10px;padding:12px;font-size:13px;white-space:pre-wrap;text-align:left;grid-column:1/-1;max-height:260px;overflow:auto}
+#oconfirm{grid-column:1/-1;background:#eaffea;color:#145214;border-radius:10px;padding:12px;font-size:14px;display:none}
+
+nav.cats a.active{background:var(--red);color:#fff}
+#catHome{max-width:1100px;margin:auto;padding:22px 14px 6px}
+.catcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:12px}
+.catcard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.09);cursor:pointer;border:1px solid #f0d9a0}
+.catcard img{width:100%;height:145px;object-fit:cover;display:block}
+.catcard div{padding:12px 14px}
+.catcard h3{color:var(--red);font-size:18px}
+.catcard p{color:#666;font-size:13px;margin-top:3px}
+.catcard span{display:inline-block;margin-top:8px;background:var(--gold);padding:6px 12px;border-radius:16px;font-weight:800;font-size:13px}
+.catbanner{position:relative;border-radius:16px;overflow:hidden;margin-bottom:6px}
+.catbanner img{width:100%;height:210px;object-fit:cover;display:block}
+.catbanner div{position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.72));display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#fff}
+.catbanner h2{color:#fff;border:none;margin:0;padding:0;font-size:30px;text-shadow:0 2px 6px #000}
+.catbanner p{font-size:15px}
+.backbtn{background:var(--dark);color:#fff;border:none;padding:10px 16px;border-radius:22px;font-weight:800;cursor:pointer;margin-bottom:12px}
+section.catpage{display:none}
+
+html{scroll-behavior:smooth}
+body{background:linear-gradient(#fffaf0,#fff3dd)}
+.hero{position:relative;overflow:hidden}
+.hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s}
+.hero .slide.on{opacity:1}
+.hero .inner{position:relative;z-index:2}
+.hero{background:#2a0d06}
+.card{transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(122,0,18,.16)}
+.catcard{transition:transform .18s,box-shadow .18s}
+.catcard:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(122,0,18,.20)}
+section.catpage{animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ibadge{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:5px 10px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.35);z-index:2}
+.ibadge.gold{background:var(--gold);color:#000}
+.popwrap{max-width:1100px;margin:auto;padding:6px 14px}
+.popscroll{display:flex;gap:12px;overflow-x:auto;padding:12px 2px;scroll-snap-type:x mandatory}
+.popcard{min-width:210px;max-width:210px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.09);scroll-snap-align:start;border:1px solid #f0d9a0}
+.popcard img{width:100%;height:120px;object-fit:cover;display:block}
+.popcard div{padding:10px 12px}
+.popcard h4{font-size:15px}.popcard p{color:var(--red);font-weight:800;margin:4px 0 8px}
+.popcard button{width:100%;background:var(--gold);border:none;padding:8px;border-radius:8px;font-weight:800;cursor:pointer}
+#floatwa{position:fixed;right:16px;bottom:86px;z-index:55;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.add.added{background:#25D366;color:#fff}
+@media print{header,nav.cats,.search,.steps,#catHome .catcards,#cartbar,#floatwa,.backbtn,.add,.hero .cta,.deal{display:none!important}section.catpage{display:block!important}#catHome{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+<header><div class="logo">🍽️ SABIR <span>HOTEL</span></div><a class="hbtn" href="tel:+923336263757">📞 0333-6263757</a></header>
+
+<div class="hero">
+  <div class="slide on" style="background-image:url('https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg')"></div>
+  <div class="slide" style="background-image:url('https://i.pinimg.com/474x/80/ce/7e/80ce7e1f9a6ff34e30f937c58d2646b5.jpg')"></div>
+  <div class="slide" style="background-image:url('https://wtgauzshwqhylflwaiuh.supabase.co/storage/v1/object/public/food-items-images/2026/06/24/b644337e-bf6d-4ace-8808-af412101da2b-Chicken_Biryani.png')"></div>
+  <div class="slide" style="background-image:url('https://www.chilitochoc.com/wp-content/uploads/2026/03/lahori-chargha-overhead-shot.jpg')"></div>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,.58);z-index:1"></div>
+  <div class="inner">
+  <div class="urdu">صابر ہوٹل اینڈ ریسٹورنٹ</div>
+  <h1>Sabir Hotel & <b>Restaurant</b></h1>
+  <p>ذائقہ جو دل کو بھا جائے! — Asli Desi Ghee Karahi, Shinwari, BBQ aur Biryani. Peer Murad, Multan Road Vehari, Near COMSATS University.</p>
+  <div><span class="badge">🕐 Always Open</span><span class="badge">🛵 Home Delivery</span><span class="badge">🔥 Desi Ghee Special</span></div>
+  <div class="cta"><a class="wa" href="https://wa.me/923336263757?text=Assalam-o-Alaikum!%20Mujhe%20Sabir%20Hotel%20se%20order%20karna%20hai." target="_blank">💬 Order on WhatsApp</a><a class="call" href="tel:+923336263757">📞 Call Now</a></div>
+  </div>
+</div>
+
+<div class="info">
+  <div>📍 <b>Address:</b> Peer Murad, Multan Road, Vehari — Near COMSATS University, Vehari, Pakistan</div>
+  <div>📞 <b>Phone / WhatsApp:</b> +92 333 6263757</div>
+  <div>✉️ <b>Email:</b> sabirhotelrestaurant@gmail.com</div>
+  <div>🕐 <b>Timing:</b> Always Open (24 Hours)</div>
+  <div>🗺️ <b>Location:</b> <a href="https://www.google.com/maps/search/?api=1&query=Sabir+Hotel+Peer+Murad+Multan+Road+Vehari+Near+COMSATS+University" target="_blank" style="color:var(--red);font-weight:800">Google Maps par Direction lein ➜</a></div>
+</div>
+
+<div class="steps">
+  <div class="step"><b>Step 1 — Website par Order karein</b>Menu se items cart mein add karein aur neeche order form bharein</div>
+  <div class="step"><b>Step 2 — Order Review dekhein</b>Poora order website par hi check karein — items, bill aur details</div>
+  <div class="step"><b>Step 3 — WhatsApp par Send</b>Confirm karte hi poora order sahi tareeqay se likha hua text ban kar hotel ke WhatsApp par chala jayega</div>
+</div>
+<nav class="cats" id="catnav"></nav>
+<div class="search"><input id="q" type="search" placeholder="🔍 Search menu... e.g. Karahi, BBQ, Biryani"></div>
+<div style="max-width:1100px;margin:auto;padding:0 14px"><div class="deal">⭐ <b>SPECIAL:</b> Chicken Shinwari Karahi Half Rs 900 / Full Rs 1800 &nbsp;|&nbsp; Beef Shinwari Karahi Half Rs 1200 / Full Rs 2300 ⭐</div></div>
+
+<div id="catHome"><h2 style="color:var(--red);font-size:26px;border-bottom:3px solid var(--gold);padding-bottom:6px">📋 Hamare Menus — Apna Menu Chunein <span style="float:right">مینیو</span></h2><div class="catcards" id="catcards"></div></div>
+<div class="popwrap" id="popwrap"><h2 style="color:var(--red);font-size:24px;border-bottom:3px solid var(--gold);padding-bottom:6px">⭐ Sab se Zyada Pasandeeda Items</h2><div class="popscroll" id="popscroll"></div></div>
+<main id="menu"></main>
+<a id="floatwa" href="https://wa.me/923336263757?text=Assalam-o-Alaikum!%20Mujhe%20Sabir%20Hotel%20se%20order%20karna%20hai." target="_blank" title="WhatsApp par order karein">💬</a>
+
+<footer>
+  <h3 style="color:var(--gold)">Sabir Hotel & Restaurant — Vehari</h3>
+  <p style="margin:8px 0">Peer Murad, Multan Road, Vehari, Near COMSATS University<br>📞 <a href="tel:+923336263757">0333-6263757</a> · ✉️ sabirhotelrestaurant@gmail.com</p>
+  <p>Order direct on WhatsApp — garma garam khana, waqt par, aap ke darwaze tak!</p>
+  <p style="margin-top:12px"><button onclick="window.print()" style="background:var(--gold);border:none;padding:10px 18px;border-radius:22px;font-weight:800;cursor:pointer">🖨️ Poora Menu Print / Save karein</button></p>
+</footer>
+
+<div id="cartbar">
+  <div class="row"><div>🛒 <b id="ccount">0</b> items · Total: <b id="ctotal">Rs 0</b></div><button class="orderbtn" onclick="toggleForm()">Order on WhatsApp ➜</button></div>
+  <div id="cartitems"></div>
+  <div class="form" id="oform" style="display:none">
+    <input id="cname" placeholder="Your Name *">
+    <input id="cphone" placeholder="Your Phone *">
+    <input id="caddr" placeholder="Delivery Address *" style="grid-column:1/-1">
+    <select id="cpay"><option>Cash on Delivery</option><option>JazzCash</option><option>EasyPaisa</option></select>
+    <input id="ctime" placeholder="Delivery time (optional)">
+    <textarea id="cnote" rows="2" placeholder="Note (optional) — e.g. kam mirch, extra raita"></textarea>
+    <pre id="opreview">Order preview yahan nazar ayega…</pre>
+    <div id="oconfirm"></div>
+    <button class="orderbtn" style="grid-column:1/-1" onclick="sendOrder()">✅ Website par Order Confirm karein — WhatsApp par Bhejein</button>
+  </div>
+</div>
+
+<script>
+const WA="923336263757";
+const MENU=[
+["Rice | چاول",[["Chicken Biryani","چکن بریانی",[["Half",250],["Full",400]]]]],
+["Desi Chicken Karahi | دیسی چکن کڑاہی",[
+ ["Desi Chicken Karahi","دیسی چکن کڑاہی",[["Half",1700],["Full",3400]]],
+ ["Special Desi Chicken Karahi","اسپیشل دیسی چکن کڑاہی",[["Half",1800],["Full",3500]]],
+ ["Desi Chicken White Karahi","دیسی چکن وائٹ کڑاہی",[["Half",1900],["Full",3700]]],
+ ["Desi Chicken Sulemani Karahi","دیسی چکن سلیمانی کڑاہی",[["Half",1800],["Full",3600]]],
+ ["Desi Chicken Makhni Karahi","دیسی مکھنی کڑاہی",[["Half",2000],["Full",3800]]],
+ ["Desi Chicken Karahi (Desi Ghee)","دیسی چکن کڑاہی دیسی گھی میں",[["Half",2000],["Full",3800]]]]],
+["Chicken Karahi | چکن کڑاہی",[
+ ["Chicken Karahi","چکن کڑاہی",[["Quarter",500],["Half",850],["Full",1600]]],
+ ["Special Chicken Karahi","اسپیشل چکن کڑاہی",[["Half",800],["Full",1700]]],
+ ["Chicken White Karahi","چکن وائٹ کڑاہی",[["Half",900],["Full",1800]]],
+ ["Chicken Shinwari Karahi","چکن شنواری کڑاہی",[["Half",900],["Full",1800]]],
+ ["Chicken Makhni Karahi","چکن مکھنی کڑاہی",[["Half",1000],["Full",2000]]],
+ ["Chicken Karahi (Desi Ghee)","چکن کڑاہی دیسی گھی میں",[["Half",1000],["Full",2000]]]]],
+["Beef Karahi | بیف کڑاہی",[
+ ["Beef Karahi","بیف کڑاہی",[["Quarter",600],["Half",1100],["Full",2200]]],
+ ["Special Beef Karahi","اسپیشل بیف کڑاہی",[["Half",1200],["Full",2300]]],
+ ["Beef White Karahi","بیف وائٹ کڑاہی",[["Half",1300],["Full",2500]]],
+ ["Beef Namkeen Karahi","بیف نمکین کڑاہی",[["Half",1200],["Full",2300]]],
+ ["Beef Makhni Karahi","بیف مکھنی کڑاہی",[["Half",1500],["Full",2600]]],
+ ["Beef Desi Ghee Karahi","بیف دیسی گھی کڑاہی",[["Half",1500],["Full",2600]]]]],
+["Mutton Karahi | مٹن کڑاہی",[
+ ["Mutton Karahi","مٹن کڑاہی",[["Half",1900],["Full",3700]]],
+ ["Special Mutton Karahi","اسپیشل مٹن کڑاہی",[["Half",2000],["Full",3800]]],
+ ["Mutton Sulemani Karahi","مٹن سلیمانی کڑاہی",[["Half",2000],["Full",3700]]],
+ ["Mutton White Karahi","مٹن وائٹ کڑاہی",[["Half",1950],["Full",3900]]],
+ ["Mutton Achari Karahi","مٹن اچاری کڑاہی",[["Half",1900],["Full",3700]]],
+ ["Mutton Shinwari Karahi","مٹن شنواری کڑاہی",[["Half",1900],["Full",3800]]]]],
+["BBQ | باربی کیو",[
+ ["Drum Stick (3 Piece)","ڈرم اسٹک 3 پیس",[["Full",450]]],
+ ["Wings Plate (6 Piece)","ونگز پلیٹ 6 پیس",[["Full",300]]],
+ ["Chicken Reshmi Kabab","چکن ریشمی کباب",[["Full",220]]],
+ ["Turkish Kabab","ترکش کباب",[["Full",250]]],
+ ["Beef Kabab","بیف کباب",[["Full",230]]],
+ ["Beef Gola Kabab","بیف گولہ کباب",[["Full",250]]],
+ ["Chicken Gola Kabab","چکن گولہ کباب",[["Full",200]]],
+ ["Chicken Tikka Boti","چکن تکہ بوٹی",[["Full",150]]],
+ ["Malai Boti","ملائی بوٹی",[["Full",250]]],
+ ["Green Boti","گرین بوٹی",[["Full",260]]],
+ ["Chicken Behari Boti","چکن بہاری بوٹی",[["Full",250]]],
+ ["Chicken Chest Piece","چکن چیسٹ پیس",[["Full",350]]],
+ ["Chicken Leg Piece","چکن لیگ پیس",[["Full",300]]],
+ ["Special Spicy Chargha + Rice","اسپیشل سپائسی چرغہ + رائس",[["Full",1600]]],
+ ["Green Spicy Chargha + Rice","گرین سپائسی چرغہ + رائس",[["Full",1700]]],
+ ["Grill Fish","فش گرل",[["Full",1500]]],
+ ["Special BBQ Platter + Rice (3 Person)","اسپیشل باربی کیو پلیٹر + رائس",[["P-H3",2800]]],
+ ["Special BBQ Platter + Rice (6 Person)","اسپیشل باربی کیو پلیٹر + رائس",[["P-H6",4500]]],
+ ["Mutton Piece (per kg)","مٹن پیس پر کلو",[["1 kg",4000]]]]],
+["Special Dishes & Salan | اسپیشل ڈشز",[
+ ["Special Milky Chanay","اسپیشل ملکی چنے",[["Plate",180]]],
+ ["Chicken Haleem","چکن حلیم",[["Plate",200]]],
+ ["Baray Paye","بڑے پائے",[["Plate",400]]],
+ ["Kadhi Pakora","کڑھی پکوڑا",[["Plate",180]]],
+ ["Vegetable","سبزی",[["Plate",180]]],
+ ["Chicken Qorma","چکن قورمہ",[["Plate",300]]],
+ ["Dal Chana","دال چنا",[["Plate",180]]],
+ ["Dal Mong","دال مونگ",[["Plate",200]]],
+ ["Shahi Dal Mash","شاہی دال ماش",[["Plate",300]]],
+ ["Chicken Boneless Malai Boti (Salan)","چکن بون لیس ملائی بوٹی",[["Plate",400]]],
+ ["Chicken Aloo Keema","چکن آلو قیمہ",[["Plate",300]]],
+ ["Chicken Keema","چکن قیمہ",[["Half Plate",180],["Full Plate",300]]],
+ ["Beef Aloo Keema","بیف آلو قیمہ",[["Plate",400]]],
+ ["Aloo Anda","آلو انڈا",[["Plate",180]]],
+ ["Beef Namkeen Qorma","بیف نمکین قورمہ",[["Plate",400]]],
+ ["Chicken Kofta","چکن کوفتہ",[["Plate",300]]],
+ ["Ojhari","اوجھڑی",[["Plate",400]]],
+ ["Beef Kaleji","بیف کلیجی",[["Plate",400]]]]],
+["Naan Roti | نان روٹی",[
+ ["Sada Paratha","سادہ پراٹھا",[["Piece",50]]],
+ ["Aloo Paratha","آلو پراٹھا",[["Piece",80]]],
+ ["Anda Paratha","انڈا پراٹھا",[["Piece",120]]],
+ ["Sada Naan","سادہ نان",[["Piece",20]]],
+ ["Roghni Naan","روغنی نان",[["Piece",30]]],
+ ["Special Roghni Naan","اسپیشل روغنی نان",[["Piece",40]]]]],
+["Cold Drinks, Tea & Dessert | کولڈ ڈرنک، چائے",[
+ ["Doodh Wali Bottle","دودھ والی بوتل",[["Full",100]]],
+ ["Doodh Soda 1/2 kg","دودھ سوڈا",[["1/2 kg",230]]],
+ ["Doodh Soda 1 kg","دودھ سوڈا",[["1 kg",400]]],
+ ["Lassi","لسی",[["Glass",150]]],
+ ["Tea Doodh Patti","چائے دودھ پتی",[["Cup",80]]],
+ ["Tea Gur Wali Special","چائے گڑ والی اسپیشل",[["Cup",100]]],
+ ["Tea Elaichi Wali Special","چائے الائچی والی اسپیشل",[["Cup",100]]],
+ ["Regular Drink","بوتل ریگولر",[["Bottle",70]]],
+ ["Mineral Water","منرل واٹر",[["Bottle",120]]],
+ ["Special Kheer","اسپیشل کھیر",[["Cup",150]]],
+ ["Raita / Salad","رائتہ / سلاد",[["Each",50]]]]]
+];
+
+const IMG={
+"Chicken Biryani":"https://wtgauzshwqhylflwaiuh.supabase.co/storage/v1/object/public/food-items-images/2026/06/24/b644337e-bf6d-4ace-8808-af412101da2b-Chicken_Biryani.png",
+"Desi Chicken Karahi":"https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg",
+"Special Desi Chicken Karahi":"https://www.whiskaffair.com/wp-content/uploads/2022/10/Boneless-Chicken-Curry-2-3-768x768.jpg",
+"Desi Chicken White Karahi":"https://ikneadtoeat.com/wp-content/uploads/2020/02/White-Chicken-Karahi-2-680x900.jpg",
+"Desi Chicken Sulemani Karahi":"https://img.cdn4dd.com/p/fit=cover,format=auto,quality=50,width=700,height=400/media/photosV2/9d1239d0-86f2-44c9-b6f1-23a1f233fd3b-retina-large.jpg",
+"Desi Chicken Makhni Karahi":"https://sifu.unileversolutions.com/image/en-SA/recipe-topvisual/2/1260-709/murgh-makhani-butter-chicken-50347620.jpg",
+"Desi Chicken Karahi (Desi Ghee)":"https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg",
+"Chicken Karahi":"https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg",
+"Special Chicken Karahi":"https://www.whiskaffair.com/wp-content/uploads/2022/10/Boneless-Chicken-Curry-2-3-768x768.jpg",
+"Chicken White Karahi":"https://ikneadtoeat.com/wp-content/uploads/2020/02/White-Chicken-Karahi-2-680x900.jpg",
+"Chicken Shinwari Karahi":"https://img.cdn4dd.com/p/fit=cover,format=auto,quality=50,width=700,height=400/media/photosV2/9d1239d0-86f2-44c9-b6f1-23a1f233fd3b-retina-large.jpg",
+"Chicken Makhni Karahi":"https://sifu.unileversolutions.com/image/en-SA/recipe-topvisual/2/1260-709/murgh-makhani-butter-chicken-50347620.jpg",
+"Chicken Karahi (Desi Ghee)":"https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg",
+"Beef Karahi":"https://cloverstatic.com/menu-assets/items/Q0EKBJN8RHXQY.jpeg?v=1775985363280",
+"Special Beef Karahi":"https://www.flourandspiceblog.com/wp-content/uploads/2024/10/IMG_4396.jpg",
+"Beef White Karahi":"https://ikneadtoeat.com/wp-content/uploads/2020/02/White-Chicken-Karahi-2-680x900.jpg",
+"Beef Namkeen Karahi":"https://www.sugarspicenmore.com/wp-content/uploads/2023/06/Mutton-Karahi-3-500x500.jpg",
+"Beef Makhni Karahi":"https://sifu.unileversolutions.com/image/en-SA/recipe-topvisual/2/1260-709/murgh-makhani-butter-chicken-50347620.jpg",
+"Beef Desi Ghee Karahi":"https://www.flourandspiceblog.com/wp-content/uploads/2024/10/IMG_4396.jpg",
+"Mutton Karahi":"https://www.sugarspicenmore.com/wp-content/uploads/2023/06/Mutton-Karahi-3-500x500.jpg",
+"Special Mutton Karahi":"https://www.flourandspiceblog.com/wp-content/uploads/2024/10/IMG_4396.jpg",
+"Mutton Sulemani Karahi":"https://img.cdn4dd.com/p/fit=cover,format=auto,quality=50,width=700,height=400/media/photosV2/9d1239d0-86f2-44c9-b6f1-23a1f233fd3b-retina-large.jpg",
+"Mutton White Karahi":"https://ikneadtoeat.com/wp-content/uploads/2020/02/White-Chicken-Karahi-2-680x900.jpg",
+"Mutton Achari Karahi":"https://twoclovesinapot.com/wp-content/uploads/2022/10/IMG_8161_jpg.jpg",
+"Mutton Shinwari Karahi":"https://img.cdn4dd.com/p/fit=cover,format=auto,quality=50,width=700,height=400/media/photosV2/9d1239d0-86f2-44c9-b6f1-23a1f233fd3b-retina-large.jpg",
+"Drum Stick (3 Piece)":"https://lemonsandzest.com/wp-content/uploads/2022/05/Grilled-Chicken-Legs-2.4.jpg",
+"Wings Plate (6 Piece)":"https://www.yellowblissroad.com/wp-content/uploads/2024/07/Grilled-Chicken-Wings-8.jpg",
+"Chicken Reshmi Kabab":"https://i.pinimg.com/736x/cb/7d/25/cb7d250bd57402dad72efa903f842118.jpg",
+"Turkish Kabab":"https://www.hauteandhealthyliving.com/wp-content/uploads/2023/06/grilled-chicken-tikka-kebabs-9.jpg",
+"Beef Kabab":"https://i.pinimg.com/736x/cb/7d/25/cb7d250bd57402dad72efa903f842118.jpg",
+"Beef Gola Kabab":"https://i.pinimg.com/736x/cb/7d/25/cb7d250bd57402dad72efa903f842118.jpg",
+"Chicken Gola Kabab":"https://www.hauteandhealthyliving.com/wp-content/uploads/2023/06/grilled-chicken-tikka-kebabs-9.jpg",
+"Chicken Tikka Boti":"https://www.hauteandhealthyliving.com/wp-content/uploads/2023/06/grilled-chicken-tikka-kebabs-9.jpg",
+"Malai Boti":"https://www.chilitochoc.com/wp-content/uploads/2022/11/malai-boti-with-green-chutney.jpg",
+"Green Boti":"https://www.chilitochoc.com/wp-content/uploads/2022/11/malai-boti-with-green-chutney.jpg",
+"Chicken Behari Boti":"https://www.hauteandhealthyliving.com/wp-content/uploads/2023/06/grilled-chicken-tikka-kebabs-9.jpg",
+"Chicken Chest Piece":"https://lemonsandzest.com/wp-content/uploads/2022/05/Grilled-Chicken-Legs-2.4.jpg",
+"Chicken Leg Piece":"https://lemonsandzest.com/wp-content/uploads/2022/05/Grilled-Chicken-Legs-2.4.jpg",
+"Special Spicy Chargha + Rice":"https://www.chilitochoc.com/wp-content/uploads/2026/03/lahori-chargha-overhead-shot.jpg",
+"Green Spicy Chargha + Rice":"https://www.chilitochoc.com/wp-content/uploads/2026/03/lahori-chargha-overhead-shot.jpg",
+"Grill Fish":"https://menuza.net/restaurant-demo3/wp-content/uploads/sites/8/2025/07/grilled-fish-1536x1536.jpg",
+"Special BBQ Platter + Rice (3 Person)":"https://i.pinimg.com/474x/80/ce/7e/80ce7e1f9a6ff34e30f937c58d2646b5.jpg",
+"Special BBQ Platter + Rice (6 Person)":"https://i.pinimg.com/474x/80/ce/7e/80ce7e1f9a6ff34e30f937c58d2646b5.jpg",
+"Mutton Piece (per kg)":"https://www.sugarspicenmore.com/wp-content/uploads/2023/06/Mutton-Karahi-3-500x500.jpg",
+"Special Milky Chanay":"https://i0.wp.com/thestoriedrecipe.com/wp-content/uploads/2021/09/Chana-Masala-1453.jpg?resize=683%2C1024&ssl=1",
+"Chicken Haleem":"https://indianexpress.com/wp-content/uploads/2025/03/haleem_filepic1600.jpg?resize=768,512",
+"Baray Paye":"https://www.localguidenews.com/media/1200/2025-06/maxresdefault1.jpg",
+"Kadhi Pakora":"https://urbanfarmie.com/wp-content/uploads/Dal-Tadka-Horizontal.jpg",
+"Vegetable":"https://jantaserishta.com/h-upload/2024/12/25/4256158-untitled-31-copy.jpg",
+"Chicken Qorma":"https://vikalinka.com/wp-content/uploads/2019/10/Chicken-Korma-13-Edit-720x720.jpg",
+"Dal Chana":"https://urbanfarmie.com/wp-content/uploads/Dal-Tadka-Horizontal.jpg",
+"Dal Mong":"https://urbanfarmie.com/wp-content/uploads/Dal-Tadka-Horizontal.jpg",
+"Shahi Dal Mash":"https://urbanfarmie.com/wp-content/uploads/Dal-Tadka-Horizontal.jpg",
+"Chicken Boneless Malai Boti (Salan)":"https://www.whiskaffair.com/wp-content/uploads/2022/10/Boneless-Chicken-Curry-2-3-768x768.jpg",
+"Chicken Aloo Keema":"https://www.sugarspicenmore.com/wp-content/uploads/2021/02/Aloo-Keema.jpeg",
+"Chicken Keema":"https://www.sugarspicenmore.com/wp-content/uploads/2021/02/Aloo-Keema.jpeg",
+"Beef Aloo Keema":"https://www.sugarspicenmore.com/wp-content/uploads/2021/02/Aloo-Keema.jpeg",
+"Aloo Anda":"https://eggs.ca/wp-content/uploads/2024/06/Bengali-Five-Spice-Anda-Aloo-Curry-CMS.jpg",
+"Beef Namkeen Qorma":"https://www.flourandspiceblog.com/wp-content/uploads/2024/10/IMG_4396.jpg",
+"Chicken Kofta":"https://lazyapron.com/wp-content/uploads/2026/04/Chicken-Kofta-Curry3-683x1024.jpg",
+"Ojhari":"https://pakistanatlas.com/wp-content/uploads/2020/09/Pakistani-Food_0091_92-Ojri-Curry.png",
+"Beef Kaleji":"https://recipe52.com/wp-content/uploads/2021/06/kaleji-liver-fry-14-640x640.jpg",
+"Sada Paratha":"https://www.jcookingodyssey.com/wp-content/uploads/2024/03/plain-paratha.jpg",
+"Aloo Paratha":"https://www.jcookingodyssey.com/wp-content/uploads/2024/03/plain-paratha.jpg",
+"Anda Paratha":"https://www.jcookingodyssey.com/wp-content/uploads/2024/03/plain-paratha.jpg",
+"Sada Naan":"https://tandoormorni.com/wp-content/uploads/2026/08/naan-bread-tandoor-oven-hero-plated.jpg",
+"Roghni Naan":"https://tandoormorni.com/wp-content/uploads/2026/08/naan-bread-tandoor-oven-hero-plated.jpg",
+"Special Roghni Naan":"https://tandoormorni.com/wp-content/uploads/2026/08/naan-bread-tandoor-oven-hero-plated.jpg",
+"Doodh Wali Bottle":"https://hajifreshjuice.com/assets/Doodh%20Soda.webp",
+"Doodh Soda 1/2 kg":"https://hajifreshjuice.com/assets/Doodh%20Soda.webp",
+"Doodh Soda 1 kg":"https://hajifreshjuice.com/assets/Doodh%20Soda.webp",
+"Lassi":"https://static.vecteezy.com/system/resources/thumbnails/049/374/905/small/lime-lassi-drink-with-yogurt-and-pistachios-in-a-classic-glass-top-view-photo.jpg",
+"Tea Doodh Patti":"https://www.jcookingodyssey.com/wp-content/uploads/2026/05/doodh-patti-chai-1-768x1152.jpg",
+"Tea Gur Wali Special":"https://images.boldsky.com/te/img/2024/01/jaggery-tea-gur-ki-chai-with-ingredients-big-1704715405.jpg",
+"Tea Elaichi Wali Special":"https://www.jcookingodyssey.com/wp-content/uploads/2026/05/doodh-patti-chai-1-768x1152.jpg",
+"Regular Drink":"https://cdn.shopify.com/s/files/1/0840/3527/2993/collections/soda-glass-bottle-5l-o0KKkyF-600.jpg?v=1703632238",
+"Mineral Water":"https://lenzinet.com/wp-content/uploads/2025/11/bottle-of-mineral-water.jpg",
+"Special Kheer":"https://www.foodiaq.com/wp-content/uploads/2026/04/Kheer.jpg",
+"Raita / Salad":"https://rollsrice.co.nz/wp-content/uploads/2026/03/Kachumber-Salad-Raita_39_IMGCentury-533x800.webp"
+};
+const FALLBACK="https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg";
+
+const CATIMG=[
+"https://wtgauzshwqhylflwaiuh.supabase.co/storage/v1/object/public/food-items-images/2026/06/24/b644337e-bf6d-4ace-8808-af412101da2b-Chicken_Biryani.png",
+"https://www.mirchitales.com/wp-content/uploads/2019/01/Chicken-Karahi-1.jpg",
+"https://www.whiskaffair.com/wp-content/uploads/2022/10/Boneless-Chicken-Curry-2-3-768x768.jpg",
+"https://cloverstatic.com/menu-assets/items/Q0EKBJN8RHXQY.jpeg?v=1775985363280",
+"https://www.sugarspicenmore.com/wp-content/uploads/2023/06/Mutton-Karahi-3-500x500.jpg",
+"https://i.pinimg.com/474x/80/ce/7e/80ce7e1f9a6ff34e30f937c58d2646b5.jpg",
+"https://vikalinka.com/wp-content/uploads/2019/10/Chicken-Korma-13-Edit-720x720.jpg",
+"https://tandoormorni.com/wp-content/uploads/2026/08/naan-bread-tandoor-oven-hero-plated.jpg",
+"https://www.jcookingodyssey.com/wp-content/uploads/2026/05/doodh-patti-chai-1-768x1152.jpg"];
+const CATEMOJI=["🍚","🍗","🐔","🥩","🐑","🔥","🍛","🫓","🥤"];
+let cart={},sel={};
+const menuEl=document.getElementById('menu'),nav=document.getElementById('catnav');
+MENU.forEach((cat,ci)=>{
+ const a=document.createElement('a');a.href='javascript:void(0)';a.id='tab'+ci;a.textContent=CATEMOJI[ci]+' '+cat[0].split('|')[0];a.onclick=()=>showCat(ci);nav.appendChild(a);
+ const cc=document.createElement('div');cc.className='catcard';const mn=Math.min(...cat[1].flatMap(i=>i[2].map(v=>v[1])));cc.innerHTML=`<img loading="lazy" src="${CATIMG[ci]}" onerror="this.onerror=null;this.src=FALLBACK" alt="${cat[0].split('|')[0]}"><div><h3>${CATEMOJI[ci]} ${cat[0].split('|')[0]} Menu</h3><p>${cat[0].split('|')[1]||''} · ${cat[1].length} items · Rs ${mn} se shuru</p><span>Menu Kholein ➜</span></div>`;cc.onclick=()=>showCat(ci);document.getElementById('catcards').appendChild(cc);
+ const s=document.createElement('section');s.id='cat'+ci;s.className='catpage';
+ s.innerHTML=`<button class="backbtn" onclick="showHome()">⬅ Saare Menus</button><div class="catbanner"><img src="${CATIMG[ci]}" onerror="this.onerror=null;this.src=FALLBACK" alt="${cat[0].split('|')[0]}"><div><h2>${CATEMOJI[ci]} ${cat[0].split('|')[0]} Menu</h2><p>${cat[0].split('|')[1]||''} · ${cat[1].length} items</p></div></div><div class="grid"></div>`;
+ const g=s.querySelector('.grid');
+ cat[1].forEach((it,ii)=>{
+   const id=ci+'_'+ii;sel[id]=0;
+   const c=document.createElement('div');c.className='card';c.dataset.name=(it[0]+' '+it[1]).toLowerCase();
+   const bd=it[0].includes('Special')?'<span class="ibadge gold">⭐ Hotel Special</span>':it[0].includes('Desi Ghee')||it[0].includes('(Desi Ghee)')?'<span class="ibadge">🔥 Desi Ghee</span>':it[0].includes('Shinwari')?'<span class="ibadge">🌶️ Shinwari</span>':'';
+   c.innerHTML=bd+`<img class="food" loading="lazy" src="${IMG[it[0]]||FALLBACK}" onerror="this.onerror=null;this.src=FALLBACK" alt="${it[0]}"><h3>${it[0]}</h3><div class="ur">${it[1]}</div><div class="variants">${it[2].map((v,vi)=>`<button class="${vi===0?'sel':''}" onclick="pick('${id}',${vi},this)">${v[0]} · Rs ${v[1]}</button>`).join('')}</div><button class="add" onclick="add('${id}',this)">+ Add to Cart</button>`;
+   g.appendChild(c);
+ });
+ menuEl.appendChild(s);
+});
+function showCat(ci){document.getElementById('catHome').style.display='none';document.getElementById('popwrap').style.display='none';document.querySelectorAll('section.catpage').forEach((s,i)=>s.style.display=i===ci?'block':'none');document.querySelectorAll('nav.cats a').forEach((a,i)=>a.classList.toggle('active',i===ci));document.getElementById('menu').scrollIntoView({behavior:'smooth'})}
+function showHome(){document.getElementById('catHome').style.display='block';document.getElementById('popwrap').style.display='block';document.querySelectorAll('section.catpage').forEach(s=>s.style.display='none');document.querySelectorAll('nav.cats a').forEach(a=>a.classList.remove('active'));window.scrollTo({top:document.getElementById('catHome').offsetTop-70,behavior:'smooth'})}
+function pick(id,vi,btn){sel[id]=vi;btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel')}
+function findItem(id){const[ci,ii]=id.split('_').map(Number);return MENU[ci][1][ii]}
+function add(id,btn){if(btn){btn.classList.add('added');const o=btn.textContent;btn.textContent='✓ Cart mein Add ho gaya';setTimeout(()=>{btn.classList.remove('added');btn.textContent=o},900)}const it=findItem(id),v=it[2][sel[id]],k=id+'_'+sel[id];if(!cart[k])cart[k]={name:it[0],variant:v[0],price:v[1],qty:0};cart[k].qty++;renderCart()}
+function chQty(k,d){cart[k].qty+=d;if(cart[k].qty<=0)delete cart[k];renderCart()}
+function renderCart(){const ks=Object.keys(cart);let n=0,t=0,html='';ks.forEach(k=>{const c=cart[k];n+=c.qty;t+=c.qty*c.price;html+=`<div><span>${c.name} (${c.variant}) × ${c.qty}</span><span class="qty"><button onclick="chQty('${k}',-1)">−</button> Rs ${c.qty*c.price} <button onclick="chQty('${k}',1)">+</button></span></div>`});
+ document.getElementById('cartbar').style.display=ks.length?'block':'none';document.getElementById('ccount').textContent=n;document.getElementById('ctotal').textContent='Rs '+t;document.getElementById('cartitems').innerHTML=html;updatePreview()}
+function toggleForm(){const f=document.getElementById('oform');f.style.display=f.style.display==='none'?'grid':'none';updatePreview()}
+let orderNo=null;
+function buildOrderText(){
+ const name=document.getElementById('cname').value.trim()||'(naam nahi likha)';
+ const ph=document.getElementById('cphone').value.trim()||'(phone nahi likha)';
+ const ad=document.getElementById('caddr').value.trim()||'(address nahi likha)';
+ if(!orderNo)orderNo='SH-'+Math.floor(100000+Math.random()*900000);
+ const now=new Date().toLocaleString('en-GB',{timeZone:'Asia/Karachi',day:'2-digit',month:'short',year:'numeric',hour:'numeric',minute:'2-digit',hour12:true});
+ const nums=['1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣','🔟'];
+ let t=0;const lines=['🍽️ *SABIR HOTEL & RESTAURANT*','🧾 *NEW ORDER — Website se*','Order No: *'+orderNo+'*','Date/Time: '+now,'━━━━━━━━━━━━━━','*📋 ORDER ITEMS*'];
+ Object.values(cart).forEach((c,i)=>{t+=c.qty*c.price;lines.push((nums[i]||((i+1)+'.'))+' *'+c.name+'* ('+c.variant+')','    Qty: '+c.qty+' × Rs '+c.price+' = *Rs '+(c.qty*c.price)+'*')});
+ lines.push('━━━━━━━━━━━━━━','💰 *TOTAL BILL: Rs '+t+'*','━━━━━━━━━━━━━━','*👤 CUSTOMER DETAILS*','Name: '+name,'Phone: '+ph,'Address: '+ad,'Payment: '+document.getElementById('cpay').value);
+ const tm=document.getElementById('ctime').value.trim();lines.push('Delivery Time: '+(tm||'Jitni jaldi mumkin ho'));
+ const nt=document.getElementById('cnote').value.trim();if(nt)lines.push('Note: '+nt);
+ lines.push('━━━━━━━━━━━━━━','_Ye order Sabir Hotel ki website se bheja gaya hai._');
+ return lines.join('\n');
+}
+function updatePreview(){const pre=document.getElementById('opreview');if(pre&&Object.keys(cart).length)pre.textContent=buildOrderText().replace(/\*/g,'')}
+function sendOrder(){const name=document.getElementById('cname').value.trim(),ph=document.getElementById('cphone').value.trim(),ad=document.getElementById('caddr').value.trim();
+ if(!name||!ph||!ad){alert('Name, Phone aur Address lazmi likhen');return}
+ const txt=buildOrderText();
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank');
+ const cf=document.getElementById('oconfirm');cf.style.display='block';cf.innerHTML='✅ <b>Order website par confirm ho gaya hai — Order No: '+orderNo+'</b><br>WhatsApp khul gaya hai, wahan <b>Send</b> dabate hi yehi proper order hotel ko pohanch jayega. Shukriya!';
+ orderNo=null}
+['cname','cphone','caddr','ctime','cnote'].forEach(id=>{document.addEventListener('input',e=>{if(e.target.id===id)updatePreview()})});
+document.getElementById('cpay').addEventListener('change',updatePreview);
+const POPULAR=['Chicken Shinwari Karahi','Chicken Biryani','Desi Chicken Karahi (Desi Ghee)','Special BBQ Platter + Rice (3 Person)','Malai Boti','Chicken Haleem','Mutton Karahi','Special Spicy Chargha + Rice'];
+const popEl=document.getElementById('popscroll');
+POPULAR.forEach(n=>{let fid=null,fitem=null;MENU.forEach((c,ci)=>c[1].forEach((it,ii)=>{if(it[0]===n){fid=ci+'_'+ii;fitem=it}}));if(!fitem)return;const d=document.createElement('div');d.className='popcard';d.innerHTML=`<img loading="lazy" src="${IMG[n]||FALLBACK}" onerror="this.onerror=null;this.src=FALLBACK" alt="${n}"><div><h4>${n}</h4><p>Rs ${fitem[2][0][1]} <small style="color:#888;font-weight:400">(${fitem[2][0][0]})</small></p><button onclick="quickAdd('${fid}',this)">+ Add to Cart</button></div>`;popEl.appendChild(d)});
+function quickAdd(id,btn){sel[id]=0;add(id,btn)}
+let sl=0;const slides=document.querySelectorAll('.hero .slide');if(slides.length>1)setInterval(()=>{slides[sl].classList.remove('on');sl=(sl+1)%slides.length;slides[sl].classList.add('on')},3500);
+document.getElementById('q').addEventListener('input',e=>{const q=e.target.value.toLowerCase().trim();if(!q){showHome();document.querySelectorAll('.card').forEach(c=>c.style.display='');return}document.getElementById('catHome').style.display='none';document.getElementById('popwrap').style.display='none';document.querySelectorAll('.card').forEach(c=>c.style.display=c.dataset.name.includes(q)?'':'none');document.querySelectorAll('section.catpage').forEach(s=>{const any=[...s.querySelectorAll('.card')].some(c=>c.style.display!=='none');s.style.display=any?'block':'none'})});
+</script>
+</body>
+</html>

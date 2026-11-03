@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mhamza7250-source.github.io/sabir-hotel/sitemap.xml
